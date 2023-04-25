@@ -20,4 +20,15 @@ with col1:
         stream.write(rows['role'])
         stream.image(f"team_portraits/{rows['image']}")
 
+with col2:
+    for index, rows in df[4:8].iterrows():
+        stream.subheader((f"{rows['first name']} {rows['last name']}"))
+        stream.write(rows['role'])
+        stream.image(f"team_portraits/{rows['image']}")
+
+with col3:
+    for index, rows in df[8:12].iterrows():
+        stream.subheader((f"{rows['first name']} {rows['last name']}"))
+        stream.write(rows['role'])
+        stream.image(f"team_portraits/{rows['image']}")
 
